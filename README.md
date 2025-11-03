@@ -68,10 +68,10 @@
 기능 목록은 아래와 같은 형식을 따름
 > - [x] **{기능명}** **:** **({branch-type}/{ticket-number}-{description})**
 
-- [ ] **입력 가이드를 출력 구현 : (feature/KLP-1-input-guide)**
-    - [ ] 구입 금액 입력 가이드를 출력
-    - [ ] 당첨 번호 입력 가이드를 출력
-    - [ ] 보너스 번호 입력 가이드를 출력
+- [x] **입력 가이드를 출력 구현 : (feature/KLP-1-input-guide)**
+    - [x] 구입 금액 입력 가이드를 출력
+    - [x] 당첨 번호 입력 가이드를 출력
+    - [x] 보너스 번호 입력 가이드를 출력
 - [ ] **사용자로 부터 입력 구현 : (feature/KLP-2-input)**
     - [ ] 구입 금액을 입력
     - [ ] 당첨 번호를 입력
@@ -163,7 +163,7 @@
 
 ### 과제 진행 요구 사항
 
-- [ ] 기능을 구현하기 전 `README.md`에 구현할 기능 목록을 정리해 추가
+- [x] 기능을 구현하기 전 `README.md`에 구현할 기능 목록을 정리해 추가
 - [ ] Git의 커밋 단위는 앞 단계에서 `README.md`에 정리한 기능 목록 단위로 추가
 - [ ] [AngularJS Git Commit Message Conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)을 참고해 커밋
   메시지를 작성
@@ -205,12 +205,14 @@
     - `camp.nextstep.edu.missionutils.Randoms`의 `pickUniqueNumbersInRange()`를 활용
     - `camp.nextstep.edu.missionutils.Console`의 `readLine()`을 활용
 - [ ] 제공된 Lotto 클래스를 사용하여 구현
-  - [ ] Lotto에 numbers 이외의 필드(인스턴스 변수)를 추가할 수 없다.
-  - [ ] numbers의 접근 제어자인 private은 변경할 수 없다.
-  - [ ] Lotto의 패키지를 변경할 수 있다.
+    - [ ] Lotto에 numbers 이외의 필드(인스턴스 변수)를 추가할 수 없다.
+    - [ ] numbers의 접근 제어자인 private은 변경할 수 없다.
+    - [ ] Lotto의 패키지를 변경할 수 있다.
 
 ### 피드백 요구 사항
 
-- [ ] [🪐1주차 피드백](https://github.com/rungeun/woowacourse-precourse-archive/blob/main/week1/1%EC%A3%BC%EC%B0%A8%20%ED%94%BC%EB%93%9C%EB%B0%B1.md) 정리 문서
-- [ ] [🪐2주차 피드백](https://github.com/rungeun/woowacourse-precourse-archive/blob/main/week2/2%EC%A3%BC%EC%B0%A8%20%ED%94%BC%EB%93%9C%EB%B0%B1.md) 정리 문서
+- [ ] [🪐1주차 피드백](https://github.com/rungeun/woowacourse-precourse-archive/blob/main/week1/1%EC%A3%BC%EC%B0%A8%20%ED%94%BC%EB%93%9C%EB%B0%B1.md)
+  정리 문서
+- [ ] [🪐2주차 피드백](https://github.com/rungeun/woowacourse-precourse-archive/blob/main/week2/2%EC%A3%BC%EC%B0%A8%20%ED%94%BC%EB%93%9C%EB%B0%B1.md)
+  정리 문서
 
