@@ -84,8 +84,8 @@
 - [x] **당첨 번호 분리 구현 : (feature/KLP-10-split-number)**
   - [x] 당첨 번호를 `,`를 기준으로 나눔
   - [x] 잘못된 당첨 번호 판별
-- [ ] **랜덤 로또 번호 생성 : (feature/KLP-4-generate-random-lotto)**
-- [ ] **구입 금액만큼 로또를 발행 : (feature/KLP-5-publish-lotto)**
+- [x] **랜덤 로또 번호 생성 : (feature/KLP-4-generate-random-lotto)**
+- [x] **구입 금액만큼 로또를 발행 : (feature/KLP-5-publish-lotto)**
 - [ ] **발행한 로또 수량 및 번호를 출력 : (feature/KLP-6-output-lotto)**
     - [ ] 로또 번호는 오름차순으로 정렬
 - [ ] **당첨 내역을 출력 : (feature/KLP-7-output-winning-history)**
