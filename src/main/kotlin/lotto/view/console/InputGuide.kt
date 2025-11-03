@@ -4,15 +4,15 @@ import lotto.view.Guide
 import lotto.view.contract.Output
 
 object InputGuide : Output {
-    override fun purchaseAmount(purchaseAmount: String) {
+    override fun purchaseAmount() {
         println(Guide.PURCHASE_AMOUNT)
     }
 
-    override fun winningNumber(numbers: String) {
+    override fun winningNumber() {
         println(Guide.WINNING_NUMBER)
     }
 
-    override fun bonusNumber(number: String) {
+    override fun bonusNumber() {
         println(Guide.BONUS_NUMBER)
     }
 
