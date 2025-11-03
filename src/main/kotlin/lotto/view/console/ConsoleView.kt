@@ -1,6 +1,8 @@
 package lotto.view.console
 
 import lotto.model.domain.Lotto
+import lotto.view.LottoRank
+import lotto.view.OutputMessage
 import lotto.view.contract.Input
 import lotto.view.contract.Output
 
@@ -24,7 +26,19 @@ class ConsoleView(
     }
 
     fun printPurchasedLottos(lottos: List<Lotto>) {
-        println("${lottos.size}개를 구매했습니다.")
+        println(OutputMessage.PURCHASE_COUNT.format(lottos.size))
         lottos.forEach { println(it) }.also { println() }
+    }
+
+    fun printStatisticsHeader(){
+        println(OutputMessage.STATISTICS_HEADER.message)
+    }
+
+    fun printWinningStatistics(results: Map<LottoRank, Int>) {
+        printStatisticsHeader()
+        listOf(LottoRank.FIFTH, LottoRank.FOURTH, LottoRank.THIRD, LottoRank.SECOND, LottoRank.FIRST)
+            .forEach { rank ->
+                println("${rank.message} - ${results[rank]}개")
+            }
     }
 }

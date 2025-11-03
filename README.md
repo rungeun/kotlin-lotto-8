@@ -88,8 +88,8 @@
 - [x] **구입 금액만큼 로또를 발행 : (feature/KLP-5-publish-lotto)**
 - [x] **발행한 로또 수량 및 번호를 출력 : (feature/KLP-6-output-lotto)**
     - [x] 로또 번호는 오름차순으로 정렬
-- [ ] **당첨 내역을 출력 : (feature/KLP-7-output-winning-history)**
-    - [ ] 일치 개수별로 출력
+- [x] **당첨 내역을 출력 : (feature/KLP-7-output-winning-history)**
+    - [x] 일치 개수별로 출력
 - [ ] **수익률 출력 : (feature/KLP-8-output-profit-rate)**
     - [ ] 수익률은 소수점 둘째 자리에서 반올림
 
