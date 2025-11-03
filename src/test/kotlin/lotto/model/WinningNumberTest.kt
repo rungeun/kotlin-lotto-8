@@ -1,6 +1,6 @@
 package lotto.model
 
-import lotto.view.LottoExceptionMessages
+import lotto.view.LottoError
 import org.assertj.core.api.Assertions.assertThatIllegalArgumentException
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
@@ -13,7 +13,7 @@ class WinningNumberTest {
     fun `빈 입력이면 예외 발생`() {
         assertThatIllegalArgumentException()
             .isThrownBy { WinningNumber("") }
-            .withMessageContaining(LottoExceptionMessages.EMPTY.message)
+            .withMessageContaining(LottoError.EMPTY.message)
     }
 
     @Test
@@ -21,7 +21,7 @@ class WinningNumberTest {
     fun `공백만 입력하면 예외 발생`() {
         assertThatIllegalArgumentException()
             .isThrownBy { WinningNumber("   ") }
-            .withMessageContaining(LottoExceptionMessages.EMPTY.message)
+            .withMessageContaining(LottoError.EMPTY.message)
     }
 
     @Test
@@ -30,7 +30,7 @@ class WinningNumberTest {
         val winningNumber = WinningNumber("1,2,3,a,5,6")
         assertThatIllegalArgumentException()
             .isThrownBy { winningNumber.parse("1,2,3,a,5,6") }
-            .withMessageContaining(LottoExceptionMessages.NOT_NUMBER.message)
+            .withMessageContaining(LottoError.NOT_NUMBER.message)
     }
 
     @Test

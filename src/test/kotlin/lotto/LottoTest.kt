@@ -1,7 +1,7 @@
 package lotto
 
 import lotto.model.domain.Lotto
-import lotto.view.LottoExceptionMessages
+import lotto.view.LottoError
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.assertj.core.api.Assertions.assertThatIllegalArgumentException
@@ -12,7 +12,7 @@ class LottoTest {
     fun `개수가 6개 미만이면 예외 발생`() {
         assertThatIllegalArgumentException()
             .isThrownBy { Lotto(listOf(1, 2, 3)) }
-            .withMessageContaining(LottoExceptionMessages.SIZE.message)
+            .withMessageContaining(LottoError.SIZE.message)
     }
 
     @Test
@@ -20,7 +20,7 @@ class LottoTest {
     fun `개수가 6개 초과면 예외 발생`() {
         assertThatIllegalArgumentException()
             .isThrownBy { Lotto(listOf(1, 2, 3, 4, 5, 6, 7)) }
-            .withMessageContaining(LottoExceptionMessages.SIZE.message)
+            .withMessageContaining(LottoError.SIZE.message)
     }
 
     @Test
@@ -28,7 +28,7 @@ class LottoTest {
     fun `번호가 1 미만이면 예외 발생`() {
         assertThatIllegalArgumentException()
             .isThrownBy { Lotto(listOf(0, 1, 2, 3, 4, 5)) }
-            .withMessageContaining(LottoExceptionMessages.POSITIVE.message)
+            .withMessageContaining(LottoError.POSITIVE.message)
     }
 
     @Test
@@ -36,7 +36,7 @@ class LottoTest {
     fun `번호가 45 초과면 예외 발생`() {
         assertThatIllegalArgumentException()
             .isThrownBy { Lotto(listOf(1, 2, 3, 4, 5, 46)) }
-            .withMessageContaining(LottoExceptionMessages.RANGE.message)
+            .withMessageContaining(LottoError.RANGE.message)
     }
 
     @Test
@@ -44,7 +44,7 @@ class LottoTest {
     fun `중복 번호면 예외 발생`() {
         assertThatIllegalArgumentException()
             .isThrownBy { Lotto(listOf(1, 2, 3, 4, 5, 5)) }
-            .withMessageContaining(LottoExceptionMessages.DUPLICATE.message)
+            .withMessageContaining(LottoError.DUPLICATE.message)
     }
 
     @Test
@@ -52,6 +52,6 @@ class LottoTest {
     fun `음수 포함시 예외 발생`() {
         assertThatIllegalArgumentException()
             .isThrownBy { Lotto(listOf(-1, 2, 3, 4, 5, 6)) }
-            .withMessageContaining(LottoExceptionMessages.POSITIVE.message)
+            .withMessageContaining(LottoError.POSITIVE.message)
     }
 }

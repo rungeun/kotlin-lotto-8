@@ -1,10 +1,10 @@
 package lotto.model.domain
 
-import lotto.view.LottoExceptionMessages
+import lotto.view.LottoError
 
 class WinningNumber(input: String) {
     init {
-        require(input.isNotBlank()) { LottoExceptionMessages.EMPTY }
+        require(input.isNotBlank()) {LottoError.EMPTY }
     }
 
     fun parse(input: String): List<Int> {
@@ -14,6 +14,6 @@ class WinningNumber(input: String) {
     }
 
     private fun validate(tokens: List<String>) {
-        require(tokens.all { it.toIntOrNull() != null }) { LottoExceptionMessages.NOT_NUMBER }
+        require(tokens.all { it.toIntOrNull() != null }) {LottoError.NOT_NUMBER }
     }
 }
