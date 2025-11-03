@@ -13,6 +13,8 @@ object LottoController {
         val tryCount = PurchaseAmount(purchaseAmountInput).toInt()
         val lottos: List<Lotto> = LottoGenerator().generateMultiple(tryCount)
 
+        view.printPurchasedLottos(lottos)
+
         val winningNumbers = view.readWinningNumbers()
 
         val bonusNumber = view.readBonusNumber()
