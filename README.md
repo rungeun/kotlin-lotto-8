@@ -90,8 +90,8 @@
     - [x] 로또 번호는 오름차순으로 정렬
 - [x] **당첨 내역을 출력 : (feature/KLP-7-output-winning-history)**
     - [x] 일치 개수별로 출력
-- [ ] **수익률 출력 : (feature/KLP-8-output-profit-rate)**
-    - [ ] 수익률은 소수점 둘째 자리에서 반올림
+- [x] **수익률 출력 : (feature/KLP-8-output-profit-rate)**
+    - [x] 수익률은 소수점 둘째 자리에서 반올림
 
 ---
 

@@ -1,6 +1,7 @@
 package lotto.view.console
 
 import lotto.model.domain.Lotto
+import lotto.model.domain.ProfitCalculator
 import lotto.view.LottoRank
 import lotto.view.OutputMessage
 import lotto.view.contract.Input
@@ -40,5 +41,10 @@ class ConsoleView(
             .forEach { rank ->
                 println("${rank.message} - ${results[rank]}개")
             }
+    }
+
+    fun printProfitRate(rate: Double) {
+        val formattedRate = ProfitCalculator().formatRate(rate)
+        println(OutputMessage.PROFIT_RATE.format(formattedRate))
     }
 }

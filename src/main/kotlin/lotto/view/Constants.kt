@@ -33,8 +33,11 @@ enum class PurchaseAmountError(val message: String) {
 
 enum class OutputMessage(val message: String) {
     PURCHASE_COUNT("개를 구매했습니다."),
-    STATISTICS_HEADER("당첨 통계\n---");
+    STATISTICS_HEADER("당첨 통계\n---"),
+    PROFIT_RATE("총 수익률은 %s%%입니다.");
+
     fun format(count: Int) = "$count$message"
+    fun format(rate: String) = message.format(rate)
 }
 
 enum class LottoRank(val matchCount: Int, val prize: Int, val message: String) {
@@ -45,3 +48,4 @@ enum class LottoRank(val matchCount: Int, val prize: Int, val message: String) {
     SECOND(5, 30_000_000, "5개 일치, 보너스 볼 일치 (30,000,000원)"),
     FIRST(6, 2_000_000_000, "6개 일치 (2,000,000,000원)");
 }
+

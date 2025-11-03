@@ -3,6 +3,7 @@ package lotto.controller
 import lotto.model.domain.Lotto
 import lotto.model.domain.LottoGenerator
 import lotto.model.domain.LottoResult
+import lotto.model.domain.ProfitCalculator
 import lotto.model.domain.PurchaseAmount
 import lotto.model.domain.WinningNumber
 import lotto.view.console.ConsoleView
@@ -26,5 +27,9 @@ object LottoController {
         val results = lottoResult.calculate()
 
         view.printWinningStatistics(results)
+
+        val calculator = ProfitCalculator()
+        val profitRate = calculator.calculate(results, purchaseAmountInput.toInt())
+        view.printProfitRate(profitRate)
     }
 }
