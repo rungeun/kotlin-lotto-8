@@ -8,12 +8,15 @@ class WinningNumber(input: String) {
     }
 
     fun parse(input: String): List<Int> {
-        val numbers = input.split(",").map { it.trim() }
-        validate(numbers)
-        return numbers.map { it.toInt() }
+        val tokens = input.split(",").map { it.trim() }
+        validate(tokens)
+        val numbers = tokens.map { it.toInt() }
+        Lotto(numbers) // Lotto 클래스에서 중복 검증
+        return numbers
     }
 
     private fun validate(tokens: List<String>) {
+        require(tokens.size == 6) { LottoError.SIZE }
         require(tokens.all { it.toIntOrNull() != null }) {LottoError.NOT_NUMBER }
     }
 }

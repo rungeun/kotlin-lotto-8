@@ -19,6 +19,18 @@ enum class LottoError(val message: String) {
     override fun toString() = "[ERROR] $message"
 }
 
+enum class BonusNumberError(val message: String) {
+    EMPTY("보너스 번호를 입력해주세요."),
+    NOT_NUMBER("보너스 번호는 숫자여야 합니다."),
+    NOT_INTEGER("보너스 번호는 정수여야 합니다."),
+    POSITIVE("보너스 번호는 양의 정수여야 합니다."),
+    RANGE("보너스 번호는 1부터 45 사이의 숫자여야 합니다."),
+    SINGLE("보너스 번호는 1개의 숫자여야 합니다."),
+    DUPLICATE("보너스 번호는 당첨 번호와 중복될 수 없습니다.");
+
+    override fun toString() = "[ERROR] $message"
+}
+
 enum class PurchaseAmountError(val message: String) {
     EMPTY("구입 금액을 입력해주세요."),
     NOT_NUMBER("구입 금액은 숫자여야 합니다."),
